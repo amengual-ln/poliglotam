@@ -41,19 +41,6 @@
       <li>CONTACTO</li>
     </nav>
   </div>
-  <div
-    class={`absolute w-full p-4 text-white text-center text-2xl ${open ? "block" : "hidden"}`}
-  >
-    <nav class="hidden lg:flex list-none gap-16 cursor-pointer">
-      <li>INICIO</li>
-      <li>QUIENES SOMOS</li>
-      <li>IDIOMAS</li>
-      <li>EXPERIENCIAS</li>
-      <li>TRADUCCIONES</li>
-      <li>INFORMACIÓN</li>
-      <li>CONTACTO</li>
-    </nav>
-  </div>
 </header>
 <section>
   <img src="/home-poliglotam.webp" alt="Hero" />
