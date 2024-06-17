@@ -1,47 +1,46 @@
 <script>
-  let open = false;
+  import Header from "../lib/components/Header.svelte";
 </script>
 
-<header class="border-t-8 border-[#E05900]">
-  <div class="flex justify-between items-center p-4 lg:px-32">
-    <img src="/logo.png" alt="Logo" class="h-12 lg:h-auto" />
-    <h1 class="opacity-80 hidden lg:block font-medium">
-      EL MÉTODO DE UN POLÍGLOTA
-    </h1>
-    <div>
-      <button class="bg-[#E05900] text-white font-medium px-6 py-4"
-        >COMIENZA HOY</button
-      >
-      <select
-        name="language"
-        id="language"
-        class="hidden lg:inline p-2 ml-2 bg-white"
-      >
-        <option value="spanish">Español</option>
-        <option value="english">English</option>
-      </select>
-    </div>
-  </div>
-  <div class="lg:flex justify-center bg-[#232323] lg:p-4 text-white">
-    <button
-      on:click={() => {
-        open = !open;
-      }}
-      class="lg:hidden text-3xl px-4 py-2"
-    >
-      =
-    </button>
-    <nav class="hidden lg:flex list-none gap-16 cursor-pointer">
-      <li>INICIO</li>
-      <li>QUIENES SOMOS</li>
-      <li>IDIOMAS</li>
-      <li>EXPERIENCIAS</li>
-      <li>TRADUCCIONES</li>
-      <li>INFORMACIÓN</li>
-      <li>CONTACTO</li>
-    </nav>
-  </div>
-</header>
+<Header />
 <section>
   <img src="/home-poliglotam.webp" alt="Hero" />
 </section>
+<div class="bg-[#d57927] text-white py-8">
+  <section
+    class="max-w-screen-2xl mx-auto px-8 lg:px-0 grid grid-cols-1 lg:grid-cols-3 items-center text-center gap-8"
+  >
+    <article>
+      <h2 class="mb-2">Small groups</h2>
+      <p>Semi-personalized teaching with groups of up to 8 people.</p>
+    </article>
+    <article>
+      <h2 class="mb-2">Poliglotam methodology</h2>
+      <p>
+        Our teachers apply methodologies that guarantee the quality of service
+        and learning.
+      </p>
+    </article>
+    <article>
+      <h2 class="mb-2">Flexible Schedules</h2>
+      <p>Schedule classes according to your availability.</p>
+    </article>
+    <article>
+      <h2 class="mb-2">Student Adaptation</h2>
+      <p>
+        Our instructors are trained to identify each student's way of learning.
+      </p>
+    </article>
+    <article>
+      <h2 class="mb-2">Exam preparation</h2>
+      <p>Receive preparation for international exams.</p>
+    </article>
+    <article>
+      <h2 class="mb-2">Immersion</h2>
+      <p>
+        Participate in recreational activities and cultural events to practice
+        your knowledge.
+      </p>
+    </article>
+  </section>
+</div>
