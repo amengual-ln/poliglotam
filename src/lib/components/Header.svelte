@@ -32,13 +32,13 @@
       =
     </button>
     <nav class="hidden lg:flex list-none gap-16 cursor-pointer">
-      <li>INICIO</li>
-      <li>QUIENES SOMOS</li>
-      <li>IDIOMAS</li>
-      <li>EXPERIENCIAS</li>
-      <li>TRADUCCIONES</li>
-      <li>INFORMACIÓN</li>
-      <li>CONTACTO</li>
+      <li><a href="/">HOME</a></li>
+      <li><a href="/about-us">ABOUT US</a></li>
+      <li>LANGUAGES</li>
+      <li>EXPERIENCES</li>
+      <li>TRANSLATIONS</li>
+      <li>INFORMATION</li>
+      <li>CONTACT</li>
     </nav>
   </div>
 </header>
