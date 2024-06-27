@@ -11,7 +11,7 @@ export const actions = {
 
       const message = {
         from: GOOGLE_EMAIL,
-        to: "amengual.ln@gmail.com", //"madrid.poliglotam@gmail.com",
+        to: "madrid.poliglotam@gmail.com",
         subject: `Poliglotam - ${studentName} accepted the terms`,
         text: `${studentName} has succesfully accepted the terms for the one to one courses`,
         html: html

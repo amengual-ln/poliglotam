@@ -24,6 +24,7 @@
   },
   "type": "module",
   "dependencies": {
-    "nodemailer": "^6.9.14"
+    "nodemailer": "^6.9.14",
+    "svelte-french-toast": "^1.2.0"
   }
 }

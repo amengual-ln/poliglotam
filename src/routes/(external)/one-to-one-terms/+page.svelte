@@ -1,6 +1,7 @@
 <script>
   let studentName = "";
   let accepted = false;
+  export let form;
 </script>
 
 <section>
@@ -86,33 +87,40 @@
   <hr class="my-4" />
 
   <form method="POST" class="max-w-screen-lg mx-auto">
-    <label for="student-name">Full name:</label>
     <div class="grid gap-4">
-      <input
-        type="text"
-        name="student-name"
-        value={studentName}
-        on:change={(event) => (studentName = event.target.value)}
-        class="border px-3 py-1 outline-[#E05900]/50"
-      />
-      <div class="flex items-baseline justify-center">
+      {#if !form?.success}
+        <label for="student-name" class="-mb-2">Full name:</label>
         <input
-          type="checkbox"
-          value={accepted}
-          on:change={() => (accepted = !accepted)}
-          id="accepted"
-          class="cursor-pointer scale-150 accent-[#E05900]"
+          type="text"
+          name="student-name"
+          value={studentName}
+          on:change={(event) => (studentName = event.target.value)}
+          class="border px-3 py-1 outline-[#E05900]/50"
         />
-        <label for="accepted" class="p-4 cursor-pointer text-lg"
-          >I have read and accept the terms for the one-to-one classes</label
+        <div class="flex items-center lg:items-baseline justify-center">
+          <input
+            type="checkbox"
+            value={accepted}
+            on:change={() => (accepted = !accepted)}
+            id="accepted"
+            class="cursor-pointer scale-150 accent-[#E05900]"
+          />
+          <label for="accepted" class="p-4 cursor-pointer text-lg"
+            >I have read and accept the terms for the one-to-one classes</label
+          >
+        </div>
+        <button
+          type="submit"
+          disabled={!accepted || studentName.trim() === ""}
+          class="bg-[#E05900]/80 text-white py-2 w-48 mx-auto hover:bg-[#E05900] disabled:bg-[#E05900]/50"
+          >Accept</button
         >
-      </div>
-      <button
-        type="submit"
-        disabled={!accepted || studentName.trim() === ""}
-        class="bg-[#E05900]/80 text-white py-2 w-48 mx-auto hover:bg-[#E05900] disabled:bg-[#E05900]/50"
-        >Accept</button
-      >
+      {/if}
+      {#if form?.success}
+        <div class="bg-[#E05900]/80 text-white text-center py-2 w-48 mx-auto">
+          Thank you!
+        </div>
+      {/if}
     </div>
   </form>
 </section>
