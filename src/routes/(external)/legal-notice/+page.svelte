@@ -6,16 +6,15 @@
     Services and Electronic Commerce, we inform the user of our details:
   </p>
   <ul class="list-disc ml-8">
-    <li>
-      Corporate Name: JUAN MANUEL FERNANDEZ SALAZAR Trade Name: POLIGLOTAM
-    </li>
+    <li>Corporate Name: JUAN MANUEL FERNANDEZ SALAZAR</li>
+    <li>Trade Name: POLIGLOTAM</li>
     <li>
       Registered Office: Mela Ioannou 63 65, 311 00, Lefkada, Ionian Islands:
+      183133144
     </li>
-    <li>
-      183133144 Phone: +306943183842 E-mail: MADRID@POLIGLOTAM.COM Registration
-    </li>
-    <li>Data: Website: https://www.poliglotam.com/</li>
+    <li>Phone: +306943183842</li>
+    <li>E-mail: MADRID@POLIGLOTAM.COM</li>
+    <li>Registration Data: Website: https://www.poliglotam.com/</li>
   </ul>
 
   <h3 class="mt-2">Purpose</h3>

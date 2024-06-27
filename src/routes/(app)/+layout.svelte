@@ -11,4 +11,4 @@
 </main>
 <Footer />
 
-<WhatsappWidget />
+<WhatsappWidget walink="https://walink.co/f4306e" />
