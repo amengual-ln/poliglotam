@@ -18,8 +18,8 @@
         id="language"
         class="hidden lg:inline p-2 ml-2 bg-white"
       >
-        <option value="english">English</option>
-        <option value="spanish">Español</option>
+        <option value="en">English</option>
+        <option value="es">Español</option>
       </select>
     </div>
   </div>
