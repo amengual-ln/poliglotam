@@ -1,14 +1,14 @@
 export const texts = {
   en: {
     title: 'Welcome!',
-    introduction: 'Welcome to Poliglotam! We are pleased to have you in our courses. To offer you quality service, we ask that you read and accept our terms and conditions for personalized (ONE TO ONE) or closed group classes.',
+    welcome: {
+      title: "Welcome",
+      items: [
+        "Welcome to Poliglotam! We are pleased to have you in our courses.",
+        "To offer you quality service, we ask that you read and accept our terms and conditions for personalized (ONE TO ONE) or closed group classes."
+      ]
+    },
     lists: {
-      welcome: {
-        title: "Welcome",
-        items: [
-          "Welcome to Poliglotam! We are pleased to have you in our courses. To offer you quality service, we ask that you read and accept our terms and conditions for personalized (ONE TO ONE) or closed group classes."
-        ]
-      },
       payments: {
         title: "Payments",
         items: [
@@ -56,7 +56,13 @@ export const texts = {
   },
   es: {
     title: '¡Bienvenido!',
-    introduction: '¡Bienvenido a Poliglotam! Nos complace tenerte en nuestros cursos. Para ofrecerte un servicio de calidad, te pedimos que leas y aceptes nuestros términos y condiciones para clases personalizadas (ONE TO ONE) o de grupo cerrado.',
+    welcome: {
+      title: "Bienvenido",
+      items: [
+        "Bienvenido a Poliglotam! Nos complace tenerte en nuestros cursos.",
+        "Para ofrecerte un servicio de calidad, te pedimos que leas y aceptes nuestros términos y condiciones para clases personalizadas (ONE TO ONE) o de grupo cerrado."
+      ]
+    },
     lists: {
       payments: {
         title: "Pagos",

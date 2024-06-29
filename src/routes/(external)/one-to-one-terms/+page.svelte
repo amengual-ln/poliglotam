@@ -22,10 +22,11 @@
   </div>
 
   <h1 class="text-center text-xl font-medium">{@html texts[lang].title}</h1>
-
   <p class="py-2">
-    {@html texts[lang].introduction}
-  </p>
+  {#each Object.entries(texts[lang].welcome.items) as [key, item]}
+    <p>{item}</p>
+  {/each}
+</p>
 
   {#each Object.entries(texts[lang].lists) as [key, list]}
     <h3>{list.title}</h3>
