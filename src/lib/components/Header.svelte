@@ -40,7 +40,6 @@
       <li class="hover:text-[#E05900] transition">LANGUAGES</li>
       <li class="hover:text-[#E05900] transition">EXPERIENCES</li>
       <li class="hover:text-[#E05900] transition">TRANSLATIONS</li>
-      <li class="hover:text-[#E05900] transition">INFORMATION</li>
       <li class="hover:text-[#E05900] transition">CONTACT</li>
       <li
         on:mouseenter={() => (subMenuOpen = true)}
