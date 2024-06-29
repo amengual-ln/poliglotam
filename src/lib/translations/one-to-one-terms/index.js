@@ -75,7 +75,7 @@ export const texts = {
         title: "Cancelaciones y Retrasos",
         items: [
           "Aviso de Cancelación: Si no puedes asistir a una clase, debes avisarnos con al menos 24 horas de antelación. Si no se cancela a tiempo, se tomará como clase dada (aplican ciertas condiciones).",
-          "Llegadas Tardías: Si te conectas tarde a la clase, ésta terminará en el horario previamente acordado sin añadir tiempo extra.",
+          "Llegadas Tardías: Si te conectas tarde a la clase, esta terminará en el horario previamente acordado sin añadir tiempo extra.",
           "Tardanza Mayor: Si te conectas 15 minutos tarde sin aviso, el profesor puede considerar la clase como dada.",
           "Medios de Cancelación: Las cancelaciones deben realizarse por correo electrónico o WhatsApp, confirmando la recepción."
         ]
