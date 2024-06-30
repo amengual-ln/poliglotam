@@ -22,11 +22,12 @@
   </div>
 
   <h1 class="text-center text-xl font-medium">{@html texts[lang].title}</h1>
-  <p class="py-2">
-  {#each Object.entries(texts[lang].welcome.items) as [key, item]}
-    <p>{item}</p>
-  {/each}
-</p>
+
+  <div class="mt-6 mb-4">
+    {#each Object.entries(texts[lang].welcome.items) as [key, item]}
+      <p>{item}</p>
+    {/each}
+  </div>
 
   {#each Object.entries(texts[lang].lists) as [key, list]}
     <h3>{list.title}</h3>
@@ -53,7 +54,9 @@
   <form method="POST" class="max-w-screen-lg mx-auto">
     <div class="grid gap-4">
       {#if !form?.success}
-        <label for="student-name" class="-mb-2">Full name:</label>
+        <label for="student-name" class="-mb-2">
+          {texts[lang].form.fullName}
+        </label>
         <input
           type="text"
           name="student-name"
@@ -70,19 +73,19 @@
             class="cursor-pointer scale-150 accent-[#E05900]"
           />
           <label for="accepted" class="p-4 cursor-pointer text-lg"
-            >I have read and accept the terms for the one-to-one classes</label
+            >{texts[lang].form.checkbox}</label
           >
         </div>
         <button
           type="submit"
           disabled={!accepted || studentName.trim() === ""}
           class="bg-[#E05900]/80 text-white py-2 w-48 mx-auto hover:bg-[#E05900] disabled:bg-[#E05900]/50"
-          >Accept</button
+          >{texts[lang].form.submit}</button
         >
       {/if}
       {#if form?.success}
         <div class="bg-[#E05900]/80 text-white text-center py-2 w-48 mx-auto">
-          Thank you!
+          {@html texts[lang].form.submitSuccess}
         </div>
       {/if}
     </div>

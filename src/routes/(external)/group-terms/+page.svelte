@@ -1,107 +1,54 @@
 <script>
+  let lang = "es";
   let studentName = "";
   let accepted = false;
   export let form;
+
+  import { texts } from "$lib/translations/group-terms";
 </script>
 
 <section>
-  <h1 class="text-center text-xl font-medium">Welcome!</h1>
+  <div class="flex justify-center">
+    <select
+      name="language"
+      id="language"
+      value={lang}
+      on:change={(event) => (lang = event.target.value)}
+      class="lg:inline p-2 ml-2 mb-8 bg-white"
+    >
+      <option value="en">English</option>
+      <option value="es">Español</option>
+    </select>
+  </div>
 
-  <p class="py-2">
-    Welcome to Poliglotam’s Group Courses! To provide you with the highest
-    quality service, please read our terms and conditions carefully. After
-    reading, kindly confirm your acceptance of them.
-  </p>
+  <h1 class="text-center text-xl font-medium">{@html texts[lang].title}</h1>
 
-  <h3>Payment</h3>
-  <ul class="py-2 list-disc ml-8">
-    <li>Classes must be paid for in advance on a monthly basis.</li>
-    <li>
-      Payment is due at least 24 hours before the start of the following month.
-    </li>
-    <li>
-      The latest payment date is the 5th of the month. If you are unable to make
-      the payment within this timeframe, please contact us to avoid being barred
-      from the courses.
-    </li>
-  </ul>
+  <div class="mt-6 mb-4">
+    {#each Object.entries(texts[lang].welcome.items) as [key, item]}
+      <p>{@html item}</p>
+    {/each}
+  </div>
 
-  <h3>Attendance and Recordings</h3>
-  <ul class="py-2 list-disc ml-8">
-    <li>
-      If you cannot attend a class, notify a member of the Poliglotam team as
-      soon as possible to request a recording of the lesson.
-    </li>
-    <li>
-      It is your responsibility to watch the recorded class within 4-5 days.
-    </li>
-    <li>
-      Missed classes will not be reimbursed. Instead, you must watch the
-      recording to stay up to date with the course.
-    </li>
-  </ul>
+  {#each Object.entries(texts[lang].lists) as [key, list]}
+    <h3>{list.title}</h3>
 
-  <h3>Punctuality</h3>
-  <ul class="py-2 list-disc ml-8">
-    <li>
-      If you join the class late, it will still end at the previously agreed
-      time without any extension.
-    </li>
-    <li>
-      If you join within the first 15 minutes of the class without prior
-      notification, the teacher may end the class at their discretion.
-    </li>
-  </ul>
+    <ul class="py-2 list-disc ml-8">
+      {#each list.items as item}
+        <li>{@html item}</li>
+      {/each}
+    </ul>
+  {/each}
 
-  <h3>Class Cancellation</h3>
-  <ul class="py-2 list-disc ml-8">
-    <li>
-      To cancel a class, there must be mutual agreement with all group members,
-      and it must be arranged 24 hours before the next class..
-    </li>
-    <li>
-      If you cannot continue the lessons, notify the teacher or a Poliglotam
-      administrator at least one week before the end of the current month.
-    </li>
-  </ul>
-
-  <h3>Classroom Etiquette</h3>
-  <ul class="py-2 list-disc ml-8">
-    <li>
-      Keep your microphone on mute when not speaking and your camera on during
-      the class.
-    </li>
-    <li>Be respectful to your classmates and teachers.</li>
-  </ul>
-
-  <h3>Complaints</h3>
-  <ul class="py-2 list-disc ml-8">
-    <li>
-      If you have any complaints, please notify the Poliglotam administrators
-      promptly so we can assist you.
-    </li>
-  </ul>
-
-  <h3>Commitment and Payments</h3>
-  <ul class="py-2 list-disc ml-8">
-    <li>
-      Timely payment is crucial as group pricing depends on everyone’s payments
-      to maintain the initial price.
-    </li>
-    <li>
-      If a student fails to pay or leaves the course without prior notice, the
-      total price will either be divided among the remaining participants or the
-      number of lessons will be adjusted to match the previous payment.
-    </li>
-  </ul>
-  <p>Thank you for your understanding and cooperation.</p>
+  <p>{@html texts[lang].thankYou}</p>
 
   <hr class="my-4" />
 
   <form method="POST" class="max-w-screen-lg mx-auto">
     <div class="grid gap-4">
       {#if !form?.success}
-        <label for="student-name" class="-mb-2">Full name:</label>
+        <label for="student-name" class="-mb-2">
+          {texts[lang].form.fullName}
+        </label>
         <input
           type="text"
           name="student-name"
@@ -118,19 +65,19 @@
             class="cursor-pointer scale-150 accent-[#E05900]"
           />
           <label for="accepted" class="p-4 cursor-pointer text-lg"
-            >I have read and accept the terms for the group classes</label
+            >{texts[lang].form.checkbox}</label
           >
         </div>
         <button
           type="submit"
           disabled={!accepted || studentName.trim() === ""}
           class="bg-[#E05900]/80 text-white py-2 w-48 mx-auto hover:bg-[#E05900] disabled:bg-[#E05900]/50"
-          >Accept</button
+          >{texts[lang].form.submit}</button
         >
       {/if}
       {#if form?.success}
         <div class="bg-[#E05900]/80 text-white text-center py-2 w-48 mx-auto">
-          Thank you!
+          {@html texts[lang].form.submitSuccess}
         </div>
       {/if}
     </div>

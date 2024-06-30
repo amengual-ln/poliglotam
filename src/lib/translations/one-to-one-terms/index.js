@@ -1,6 +1,6 @@
 export const texts = {
   en: {
-    title: 'Welcome!',
+    title: "Welcome!",
     welcome: {
       title: "Welcome",
       items: [
@@ -52,10 +52,16 @@ export const texts = {
         "Once you have read the terms and conditions, we ask that you confirm your acceptance by writing your full name.",
         "For any additional queries, we are at your disposal. We hope you enjoy your learning experience with us!"
       ]
+    },
+    form: {
+      fullName: "Full name:",
+      checkbox: "I have read and accept the terms for the group classes.",
+      submit: "Accept",
+      submitSuccess: "Thanks!"
     }
   },
   es: {
-    title: '¡Bienvenido!',
+    title: "¡Bienvenido!",
     welcome: {
       title: "Bienvenido",
       items: [
@@ -107,6 +113,12 @@ export const texts = {
         "Una vez leídos los términos y condiciones, te pedimos que confirmes tu aceptación de los mismos escribiendo tu nombre completo.",
         "Para cualquier consulta adicional, estamos a tu disposición. ¡Esperamos que disfrutes de tu experiencia de aprendizaje con nosotros!"
       ]
+    },
+    form: {
+      fullName: "Nombre completo:",
+      checkbox: "He leído y acepto los términos para los cursos grupales.",
+      submit: "Acepto",
+      submitSuccess: "¡Gracias!"
     }
   }
 };
