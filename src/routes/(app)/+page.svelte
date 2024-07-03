@@ -1,10 +1,10 @@
 <script>
-  import ExamPreparation from "../../lib/components/icons/ExamPreparation.svelte";
-  import SmallGroups from "../../lib/components/icons/SmallGroups.svelte";
-  import FlexibleSchedules from "../../lib/components/icons/FlexibleSchedules.svelte";
-  import PoliglotamMethodology from "../../lib/components/icons/PoliglotamMethodology.svelte";
-  import StudentAdaptation from "../../lib/components/icons/StudentAdaptation.svelte";
-  import Immersion from "../../lib/components/icons/Immersion.svelte";
+  import ExamPreparation from "$lib/components/icons/ExamPreparation.svelte";
+  import SmallGroups from "$lib/components/icons/SmallGroups.svelte";
+  import FlexibleSchedules from "$lib/components/icons/FlexibleSchedules.svelte";
+  import PoliglotamMethodology from "$lib/components/icons/PoliglotamMethodology.svelte";
+  import StudentAdaptation from "$lib/components/icons/StudentAdaptation.svelte";
+  import Immersion from "$lib/components/icons/Immersion.svelte";
 </script>
 
 <section>

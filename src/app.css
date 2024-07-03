@@ -2,14 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: BrownStd;
+  src: url("/fonts/bstd.woff")
+}
+
 @layer base {
   body {
-    @apply flex flex-col min-h-screen
+    @apply flex flex-col min-h-screen;
+    font-family: BrownStd;
   }
+
   h2 {
-    @apply text-xl font-medium;
+    @apply text-xl font-[600];
   }
+
   h3 {
-    @apply text-lg font-medium;
+    @apply text-lg font-[600];
   }
 }

@@ -1,5 +1,5 @@
 <section
-  class="grid place-content-center grid-cols-2 min-h-[calc(100vh-300px)] max-w-screen-xl mx-auto"
+  class="grid place-content-center xl:grid-cols-2 min-h-[calc(100vh-300px)] max-w-screen-xl mx-auto p-8"
 >
   <div></div>
   <p class="text-xl">
