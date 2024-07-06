@@ -3,7 +3,7 @@
   import { texts } from "$lib/translations/contact";
 </script>
 
-<section class="grid lg:grid-cols-2 items-start max-w-[1440px] mx-auto text-xl">
+<section class="grid lg:grid-cols-2 items-start max-w-[1440px] mx-auto text-xl animate-fade-up lg:mt-6">
   <div class="grid gap-4 p-8">
     <h2 class="text-center lg:text-left">{@html texts[$lang].title}</h2>
     <p>{@html texts[$lang].text}</p>

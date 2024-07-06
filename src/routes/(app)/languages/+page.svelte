@@ -24,9 +24,9 @@
     </div>
   </div>
   <div class="bg-poliglotam_black text-white text-center text-xl p-8">
-    <p>{texts[$lang].enroll}</p>
+    <p class="animate-fade-up animate-delay-300">{texts[$lang].enroll}</p>
 
-    <ul class="uppercase grid grid-cols-2 lg:grid-cols-3 gap-12 my-12 lg:mx-12">
+    <ul class="uppercase grid grid-cols-2 lg:grid-cols-3 gap-12 my-12 lg:mx-12 animate-fade-up animate-delay-700">
       <a
         href="/languages/german"
         class="hover:text-poliglotam_orange grid place-items-center items-center gap-4 text-lg"
