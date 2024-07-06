@@ -63,7 +63,7 @@
         {texts[$lang].menu.translations}
       </li>
       <li class="hover:text-poliglotam_orange transition">
-        {texts[$lang].menu.contact}
+        <a href="/contact">{texts[$lang].menu.contact}</a>
       </li>
       <li
         on:mouseenter={() => (subMenuOpen = true)}
@@ -158,7 +158,7 @@
         on:click={() => {
           open = !open;
         }}
-        href="/#">{texts[$lang].menu.contact}</a
+        href="/contact">{texts[$lang].menu.contact}</a
       >
     </li>
     <li>
