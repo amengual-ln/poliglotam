@@ -32,7 +32,7 @@
 <section>
   <section class="bg-poliglotam_black/20">
     <div
-      class="grid grid-cols-1 lg:grid-cols-2 p-8 place-items-center items-center max-w-[1440px] mx-auto"
+      class="grid grid-cols-1 lg:grid-cols-2 p-8 place-items-center items-center max-w-[1440px] mx-auto animate-fade-up"
     >
       <div class="grid gap-4 mb-8">
         {@html texts[$lang].newWay}
@@ -42,9 +42,9 @@
       </div>
     </div>
   </section>
-  <section>
+  <section class="animage-fade-up">
     <div
-      class="grid grid-cols-1 lg:grid-cols-2 p-8 place-items-center items-center max-w-[1440px] mx-auto"
+      class="grid grid-cols-1 lg:grid-cols-2 p-8 place-items-center items-center max-w-[1440px] mx-auto animate-fade-up"
     >
       <div class="max-w-[500px] overflow-hidden order-last lg:order-none">
         <Slider images={slider2} />
