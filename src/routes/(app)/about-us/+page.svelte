@@ -1,5 +1,7 @@
 <script>
   import Members from "$lib/components/Members.svelte";
+  import { lang } from "$lib/stores/useLangSetting.js"
+  import { texts } from "$lib/translations/about-us"
 </script>
 
 <svelte:head>
@@ -12,10 +14,7 @@
   >
     <div></div>
     <p class="text-xl">
-      We are an institution formed by specialized language teachers with the
-      purpose of providing teaching that adapts to each person's way of
-      learning, using methods that make language acquisition a dynamic,
-      enriching, and effective process.
+      {texts[$lang].text}
     </p>
   </div>
   <Members />
