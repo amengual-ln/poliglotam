@@ -1,7 +1,7 @@
 <script>
   import Slider from "$lib/components/Slider.svelte";
   import { lang } from "$lib/stores/useLangSetting.js";
-  import { texts } from "$lib/translations/experiences"
+  import { texts } from "$lib/translations/experiences";
 
   const slider1 = [
     "/experiences/experience1.webp",
@@ -30,12 +30,28 @@
 </script>
 
 <section>
-  <div class="grid">
-    <p>{texts[$lang].newWay}</p>
-    <Slider images={slider1} />
-  </div>
-  <div class="grid">
-    <Slider images={slider2} />
-    <p>{texts[$lang].travelLearning}</p>
-  </div>
+  <section class="bg-poliglotam_black/20">
+    <div
+      class="grid grid-cols-1 lg:grid-cols-2 p-8 place-items-center items-center max-w-[1440px] mx-auto"
+    >
+      <div class="grid gap-4 mb-8">
+        {@html texts[$lang].newWay}
+      </div>
+      <div class="max-w-[500px] overflow-hidden">
+        <Slider images={slider1} />
+      </div>
+    </div>
+  </section>
+  <section>
+    <div
+      class="grid grid-cols-1 lg:grid-cols-2 p-8 place-items-center items-center max-w-[1440px] mx-auto"
+    >
+      <div class="max-w-[500px] overflow-hidden order-last lg:order-none">
+        <Slider images={slider2} />
+      </div>
+      <div class="grid gap-4 my-8">
+        {@html texts[$lang].travelLearning}
+      </div>
+    </div>
+  </section>
 </section>

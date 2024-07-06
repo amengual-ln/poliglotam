@@ -12,7 +12,7 @@
 <div
   use:inview={{ unobserveOnEnter: true, rootMargin: "0%" }}
   on:change={({ detail }) => {
-    isInView = detail.inView;
+    isInView = detail?.inView || true;
   }}
 >
   {#if isInView}
