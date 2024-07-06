@@ -6,6 +6,9 @@
   import PoliglotamMethodology from "$lib/components/icons/PoliglotamMethodology.svelte";
   import StudentAdaptation from "$lib/components/icons/StudentAdaptation.svelte";
   import Immersion from "$lib/components/icons/Immersion.svelte";
+
+  import { lang } from "$lib/stores/useLangSetting.js";
+  import { texts } from "$lib/translations/home";
 </script>
 
 <svelte:head>
@@ -24,8 +27,8 @@
         <div class="flex justify-center pb-6">
           <SmallGroups color="white" />
         </div>
-        <h2 class="mb-2">Small groups</h2>
-        <p>Semi-personalized teaching with groups of up to 8 people.</p>
+        <h2 class="mb-2">{texts[$lang].smallGroups.title}</h2>
+        <p>{texts[$lang].smallGroups.text}</p>
       </article>
     </Animate>
     <Animate type="fly">
@@ -33,11 +36,8 @@
         <div class="flex justify-center pb-6">
           <PoliglotamMethodology color="white" />
         </div>
-        <h2 class="mb-2">Poliglotam methodology</h2>
-        <p>
-          Our teachers apply methodologies that guarantee the quality of service
-          and learning.
-        </p>
+        <h2 class="mb-2">{texts[$lang].poliglotamMethodology.title}</h2>
+        <p>{texts[$lang].poliglotamMethodology.text}</p>
       </article>
     </Animate>
     <Animate type="fly">
@@ -45,8 +45,8 @@
         <div class="flex justify-center pb-6">
           <FlexibleSchedules color="white" />
         </div>
-        <h2 class="mb-2">Flexible Schedules</h2>
-        <p>Schedule classes according to your availability.</p>
+        <h2 class="mb-2">{texts[$lang].flexibleSchedules.title}</h2>
+        <p>{texts[$lang].flexibleSchedules.text}</p>
       </article>
     </Animate>
     <Animate type="fly">
@@ -54,11 +54,8 @@
         <div class="flex justify-center pb-6">
           <StudentAdaptation color="white" />
         </div>
-        <h2 class="mb-2">Student Adaptation</h2>
-        <p>
-          Our instructors are trained to identify each student's way of
-          learning.
-        </p>
+        <h2 class="mb-2">{texts[$lang].studentAdaptation.title}</h2>
+        <p>{texts[$lang].studentAdaptation.text}</p>
       </article>
     </Animate>
     <Animate type="fly">
@@ -66,8 +63,8 @@
         <div class="flex justify-center pb-6">
           <ExamPreparation color="white" />
         </div>
-        <h2 class="mb-2">Exam preparation</h2>
-        <p>Receive preparation for international exams.</p>
+        <h2 class="mb-2">{texts[$lang].examPreparation.title}</h2>
+        <p>{texts[$lang].examPreparation.text}</p>
       </article>
     </Animate>
     <Animate type="fly">
@@ -75,11 +72,8 @@
         <div class="flex justify-center pb-6">
           <Immersion color="white" />
         </div>
-        <h2 class="mb-2">Immersion</h2>
-        <p>
-          Participate in recreational activities and cultural events to practice
-          your knowledge.
-        </p>
+        <h2 class="mb-2">{texts[$lang].immersion.title}</h2>
+        <p>{texts[$lang].immersion.text}</p>
       </article>
     </Animate>
   </section>
