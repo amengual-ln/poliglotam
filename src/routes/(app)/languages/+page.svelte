@@ -1,5 +1,7 @@
 <script>
   import Members from "$lib/components/Members.svelte";
+  import { lang } from "$lib/stores/useLangSetting.js";
+  import { texts } from "$lib/translations/languages";
 </script>
 
 <svelte:head>
@@ -10,9 +12,7 @@
   <div class="grid grid-cols-1 xl:grid-cols-2 place-items-center">
     <div class="max-w-[80%] pt-12 xl:pl-48">
       <p class="text-xl text-center animate-fade-up">
-        What makes us unique is our ability to adapt languages to the way each
-        student learns. Our courses are designed by polyglot linguists who will
-        make your learning experience unique.
+        {texts[$lang].heroText}
       </p>
     </div>
     <div class="overflow-hidden">
@@ -24,75 +24,248 @@
     </div>
   </div>
   <div class="bg-poliglotam_black text-white text-center text-xl p-8">
-    <p>
-      Enroll in our courses and become part of our community, where you can
-      attend our events and travel with your classmates and teachers.
-    </p>
+    <p>{texts[$lang].enroll}</p>
 
-    <ul class="uppercase grid grid-cols-2 lg:grid-cols-3 gap-8 my-12">
-      <li class="hover:text-poliglotam_orange text-lg">
-        <a href="/languages/german">GERMAN</a>
+    <ul class="uppercase grid grid-cols-2 lg:grid-cols-3 gap-12 my-12 lg:mx-12">
+      <a
+        href="/languages/german"
+        class="hover:text-poliglotam_orange grid place-items-center items-center gap-4 text-lg"
+      >
+        <img
+          src="/languages/german/german-flag.webp"
+          class="h-8 -mt-1"
+          alt=""
+        />
+        <li>{texts[$lang].german}</li>
+      </a>
+      <li>
+        <a
+          href="/languages/czech"
+          class="hover:text-poliglotam_orange grid place-items-center items-center gap-4 text-lg"
+        >
+          <img
+            src="/languages/czech/czech-flag.webp"
+            class="h-8 -mt-1"
+            alt=""
+          />
+          {texts[$lang].czech}
+        </a>
       </li>
-      <li class="hover:text-poliglotam_orange">
-        <a href="/languages/czech">czech</a>
+      <li>
+        <a
+          href="/languages/chinese"
+          class="hover:text-poliglotam_orange grid place-items-center items-center gap-4 text-lg"
+        >
+          <img
+            src="/languages/chinese/chinese-flag.webp"
+            class="h-8 -mt-1"
+            alt=""
+          />
+          {texts[$lang].chinese}
+        </a>
       </li>
-      <li class="hover:text-poliglotam_orange">
-        <a href="/languages/chinese">chinese</a>
+      <li>
+        <a
+          href="/languages/korean"
+          class="hover:text-poliglotam_orange grid place-items-center items-center gap-4 text-lg"
+        >
+          <img
+            src="/languages/korean/korean-flag.webp"
+            class="h-8 -mt-1"
+            alt=""
+          />
+          {texts[$lang].korean}
+        </a>
       </li>
-      <li class="hover:text-poliglotam_orange">
-        <a href="/languages/korean">korean</a>
+      <li>
+        <a
+          href="/languages/croatian"
+          class="hover:text-poliglotam_orange grid place-items-center items-center gap-4 text-lg"
+        >
+          <img
+            src="/languages/croatian/croatian-flag.webp"
+            class="h-8 -mt-1"
+            alt=""
+          />
+          {texts[$lang].croatian}
+        </a>
       </li>
-      <li class="hover:text-poliglotam_orange">
-        <a href="/languages/croatian">croatian</a>
+      <li>
+        <a
+          href="/languages/spanish"
+          class="hover:text-poliglotam_orange grid place-items-center items-center gap-4 text-lg"
+        >
+          <img
+            src="/languages/spanish/spanish-flag.webp"
+            class="h-8 -mt-1"
+            alt=""
+          />
+          {texts[$lang].spanish}
+        </a>
       </li>
-      <li class="hover:text-poliglotam_orange">
-        <a href="/languages/spanish">spanish</a>
+      <li>
+        <a
+          href="/languages/french"
+          class="hover:text-poliglotam_orange grid place-items-center items-center gap-4 text-lg"
+        >
+          <img
+            src="/languages/french/french-flag.webp"
+            class="h-8 -mt-1"
+            alt=""
+          />
+          {texts[$lang].french}
+        </a>
       </li>
-      <li class="hover:text-poliglotam_orange">
-        <a href="/languages/french">french</a>
+      <li>
+        <a
+          href="/languages/greek"
+          class="hover:text-poliglotam_orange grid place-items-center items-center gap-4 text-lg"
+        >
+          <img
+            src="/languages/greek/greek-flag.webp"
+            class="h-8 -mt-1"
+            alt=""
+          />
+          {texts[$lang].greek}
+        </a>
       </li>
-      <li class="hover:text-poliglotam_orange">
-        <a href="/languages/greek">greek</a>
+      <li>
+        <a
+          href="/languages/hindi"
+          class="hover:text-poliglotam_orange grid place-items-center items-center gap-4 text-lg"
+        >
+          <img
+            src="/languages/hindi/hindi-flag.webp"
+            class="h-8 -mt-1"
+            alt=""
+          />
+          {texts[$lang].hindi}
+        </a>
       </li>
-      <li class="hover:text-poliglotam_orange">
-        <a href="/languages/hindi">hindi</a>
+      <li>
+        <a
+          href="/languages/dutch"
+          class="hover:text-poliglotam_orange grid place-items-center items-center gap-4 text-lg"
+        >
+          <img
+            src="/languages/dutch/dutch-flag.webp"
+            class="h-8 -mt-1"
+            alt=""
+          />
+          {texts[$lang].dutch}
+        </a>
       </li>
-      <li class="hover:text-poliglotam_orange">
-        <a href="/languages/dutch">dutch</a>
+      <li>
+        <a
+          href="/languages/english"
+          class="hover:text-poliglotam_orange grid place-items-center items-center gap-4 text-lg"
+        >
+          <img
+            src="/languages/english/english-flag.webp"
+            class="h-8 -mt-1"
+            alt=""
+          />
+          {texts[$lang].english}
+        </a>
       </li>
-      <li class="hover:text-poliglotam_orange">
-        <a href="/languages/english">english</a>
+      <li>
+        <a
+          href="/languages/icelandic"
+          class="hover:text-poliglotam_orange grid place-items-center items-center gap-4 text-lg"
+        >
+          <img
+            src="/languages/icelandic/icelandic-flag.webp"
+            class="h-8 -mt-1"
+            alt=""
+          />
+          {texts[$lang].icelandic}
+        </a>
       </li>
-      <li class="hover:text-poliglotam_orange">
-        <a href="/languages/icelandic">icelandic</a>
+      <li>
+        <a
+          href="/languages/italian"
+          class="hover:text-poliglotam_orange grid place-items-center items-center gap-4 text-lg"
+        >
+          <img
+            src="/languages/italian/italian-flag.webp"
+            class="h-8 -mt-1"
+            alt=""
+          />
+          {texts[$lang].italian}
+        </a>
       </li>
-      <li class="hover:text-poliglotam_orange">
-        <a href="/languages/italian">italian</a>
+      <li>
+        <a
+          href="/languages/japanese"
+          class="hover:text-poliglotam_orange grid place-items-center items-center gap-4 text-lg"
+        >
+          <img
+            src="/languages/japanese/japanese-flag.webp"
+            class="h-8 -mt-1"
+            alt=""
+          />
+          {texts[$lang].japanese}
+        </a>
       </li>
-      <li class="hover:text-poliglotam_orange">
-        <a href="/languages/japanese">japanese</a>
+      <li>
+        <a
+          href="/languages/classical-latin"
+          class="hover:text-poliglotam_orange grid place-items-center items-center gap-4 text-lg"
+        >
+          <img
+            src="/languages/classical-latin/classical-latin-flag.webp"
+            class="h-8 -mt-1"
+            alt=""
+          />
+          {texts[$lang]["classical-latin"]}
+        </a>
       </li>
-      <li class="hover:text-poliglotam_orange">
-        <a href="/languages/classical-latin">classical latin</a>
+      <li>
+        <a
+          href="/languages/portuguese"
+          class="hover:text-poliglotam_orange grid place-items-center items-center gap-4 text-lg"
+        >
+          <img
+            src="/languages/portuguese/portuguese-flag.webp"
+            class="h-8 -mt-1"
+            alt=""
+          />
+          {texts[$lang].portuguese}
+        </a>
       </li>
-      <li class="hover:text-poliglotam_orange">
-        <a href="/languages/portuguese">portuguese</a>
+      <li>
+        <a
+          href="/languages/romanian"
+          class="hover:text-poliglotam_orange grid place-items-center items-center gap-4 text-lg"
+        >
+          <img
+            src="/languages/romanian/romanian-flag.webp"
+            class="h-8 -mt-1"
+            alt=""
+          />
+          {texts[$lang].romanian}
+        </a>
       </li>
-      <li class="hover:text-poliglotam_orange">
-        <a href="/languages/romanian">romanian</a>
-      </li>
-      <li class="hover:text-poliglotam_orange">
-        <a href="/languages/russian">russian</a>
+      <li>
+        <a
+          href="/languages/russian"
+          class="hover:text-poliglotam_orange grid place-items-center items-center gap-4 text-lg"
+        >
+          <img
+            src="/languages/russian/russian-flag.webp"
+            class="h-8 -mt-1"
+            alt=""
+          />
+          {texts[$lang].russian}
+        </a>
       </li>
     </ul>
 
     <p>
-      Don't just learn the language, <span class="text-poliglotam_orange"
-        >live it!</span
-      >
+      {@html texts[$lang].dontJustLearn}
     </p>
     <br />
-    <p>Ask about our official exam preparation and certification courses.</p>
+    <p>{texts[$lang].askForOur}</p>
   </div>
 
   <Members />
