@@ -35,7 +35,7 @@
       </div>
     </div>
   </Animate>
-  <div class="lg:flex justify-center bg-poliglotam_black lg:p-4 text-white">
+  <div class="flex justify-between lg:justify-center bg-poliglotam_black lg:p-4 text-white">
     <button
       on:click={() => {
         open = !open;
@@ -90,6 +90,16 @@
         </div>
       </li>
     </nav>
+    <select
+          name="language"
+          id="language"
+          bind:value={$lang}
+          on:change={console.log($lang)}
+          class="inline md:hidden p-2 mr-4 bg-poliglotam_black focus:outline-none"
+        >
+          <option value="en">English</option>
+          <option value="es">Español</option>
+        </select>
   </div>
 
   <div>

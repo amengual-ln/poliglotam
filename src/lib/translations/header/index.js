@@ -3,7 +3,7 @@ export const texts = {
     tagline: "EL MÉTODO DE UN POLÍGLOTA",
     cta: "COMIENZA HOY",
     menu: {
-      home: "inico",
+      home: "inicio",
       aboutUs: "quienes somos",
       languages: "idiomas",
       experiences: "experiencias",
