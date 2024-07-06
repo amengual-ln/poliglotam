@@ -1,5 +1,6 @@
 <script>
   import "../../app.css";
+  import { lang } from "$lib/stores/useLangSetting.js";
   import Header from "$lib/components/Header.svelte";
   import Footer from "$lib/components/Footer.svelte";
   import WhatsappWidget from "$lib/components/WhatsappWidget.svelte";

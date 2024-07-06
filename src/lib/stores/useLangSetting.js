@@ -1,13 +1,21 @@
 import { browser } from "$app/environment";
-import { writable } from 'svelte/store'
+import { writable } from 'svelte/store';
 
-let stored
-export let lang
+let lang;
 
 if (browser) {
-  stored = localStorage.getItem('lang')
-  const navigatorLanguage = ['es', 'en'].includes(window.navigator.language.split("-")[0]) ? window.navigator.language.split("-")[0] : 'en'
-  lang = writable(stored || navigatorLanguage)
+  const stored = localStorage.getItem('lang');
+  const navigatorLanguage = ['es', 'en'].includes(window.navigator.language.split("-")[0])
+    ? window.navigator.language.split("-")[0]
+    : 'en';
 
-  lang.subscribe((value) => localStorage.setItem('lang', value))
+  lang = writable(stored || navigatorLanguage);
+
+  lang.subscribe((value) => {
+    localStorage.setItem('lang', value);
+  });
+} else {
+  lang = writable('en');
 }
+
+export { lang };

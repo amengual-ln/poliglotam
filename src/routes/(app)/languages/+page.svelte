@@ -1,7 +1,15 @@
+<script>
+  import Members from "$lib/components/Members.svelte";
+</script>
+
+<svelte:head>
+  <title>Poliglotam</title>
+</svelte:head>
+
 <section>
   <div class="grid grid-cols-1 xl:grid-cols-2 place-items-center">
     <div class="max-w-[80%] pt-12 xl:pl-48">
-      <p class="text-xl text-center">
+      <p class="text-xl text-center animate-fade-up">
         What makes us unique is our ability to adapt languages to the way each
         student learns. Our courses are designed by polyglot linguists who will
         make your learning experience unique.
@@ -11,7 +19,7 @@
       <img
         src="/languages/hero.png"
         alt="Languages"
-        class="max-h-[500px] scale-125 pt-12"
+        class="max-h-[500px] scale-125 pt-12 animate-fade-up"
       />
     </div>
   </div>
@@ -87,26 +95,5 @@
     <p>Ask about our official exam preparation and certification courses.</p>
   </div>
 
-  <section class="grid xl:grid-cols-4 max-w-screen-xl mx-auto gap-8 my-8">
-    <article class="grid gap-4 shadow-lg p-4">
-      <img src="/members/tatiana.webp" alt="Tatiana Leonova" />
-      <h2>Tatiana Leonova</h2>
-      <span class="text-sm -mt-4 text-poliglotam_black/80">INSTRUCTORA DE IDIOMAS</span>
-    </article>
-    <article class="grid gap-4 shadow-lg p-4">
-      <img src="/members/jowita.webp" alt="Jowita Marta Łuczak" />
-      <h2>Jowita Marta Łuczak</h2>
-      <span class="text-sm -mt-4 text-poliglotam_black/80">INSTRUCTORA DE IDIOMAS</span>
-    </article>
-    <article class="grid gap-4 shadow-lg p-4">
-      <img src="/members/manolo.webp" alt="Manolo Fernández" />
-      <h2>Manolo Fernández</h2>
-      <span class="text-sm -mt-4 text-poliglotam_black/80">LICENCIADO EN LENGUAS</span>
-    </article>
-    <article class="grid gap-4 shadow-lg p-4">
-      <img src="/members/eduardo.webp" alt="Eduardo López" />
-      <h2>Eduardo López</h2>
-      <span class="text-sm -mt-4 text-poliglotam_black/80">INSTRUCTOR DE IDIOMAS</span>
-    </article>
-  </section>
+  <Members />
 </section>

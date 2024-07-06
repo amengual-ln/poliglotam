@@ -25,6 +25,9 @@
   "type": "module",
   "dependencies": {
     "nodemailer": "^6.9.14",
-    "svelte-french-toast": "^1.2.0"
+    "svelte-french-toast": "^1.2.0",
+    "svelte-inview": "^4.0.2",
+    "swiper": "^11.1.4",
+    "tailwindcss-animated": "^1.1.2"
   }
 }
