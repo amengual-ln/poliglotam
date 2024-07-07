@@ -1,10 +1,12 @@
 <script>
-  let lang = "es";
+  import { page } from "$app/stores";
+  import { texts } from "$lib/translations/group-terms";
+
+  let selectedLang = $page.url.searchParams.get("lang");
+
   let studentName = "";
   let accepted = false;
   export let form;
-
-  import { texts } from "$lib/translations/group-terms";
 </script>
 
 <section>
@@ -12,8 +14,7 @@
     <select
       name="language"
       id="language"
-      value={lang}
-      on:change={(event) => (lang = event.target.value)}
+      bind:value={selectedLang}
       class="lg:inline p-2 ml-2 mb-8 bg-white"
     >
       <option value="en">English</option>
@@ -21,15 +22,17 @@
     </select>
   </div>
 
-  <h1 class="text-center text-xl font-medium">{@html texts[lang].title}</h1>
+  <h1 class="text-center text-xl font-medium">
+    {@html texts[selectedLang].title}
+  </h1>
 
   <div class="mt-6 mb-4">
-    {#each Object.entries(texts[lang].welcome.items) as [key, item]}
+    {#each Object.entries(texts[selectedLang].welcome.items) as [key, item]}
       <p>{@html item}</p>
     {/each}
   </div>
 
-  {#each Object.entries(texts[lang].lists) as [key, list]}
+  {#each Object.entries(texts[selectedLang].lists) as [key, list]}
     <h3>{list.title}</h3>
 
     <ul class="py-2 list-disc ml-8">
@@ -39,7 +42,7 @@
     </ul>
   {/each}
 
-  <p>{@html texts[lang].thankYou}</p>
+  <p>{@html texts[selectedLang].thankYou}</p>
 
   <hr class="my-4" />
 
@@ -47,7 +50,7 @@
     <div class="grid gap-4">
       {#if !form?.success}
         <label for="student-name" class="-mb-2">
-          {texts[lang].form.fullName}
+          {texts[selectedLang].form.fullName}
         </label>
         <input
           type="text"
@@ -65,19 +68,19 @@
             class="cursor-pointer scale-150 accent-[#E05900]"
           />
           <label for="accepted" class="p-4 cursor-pointer text-lg"
-            >{texts[lang].form.checkbox}</label
+            >{texts[selectedLang].form.checkbox}</label
           >
         </div>
         <button
           type="submit"
           disabled={!accepted || studentName.trim() === ""}
           class="bg-[#E05900]/80 text-white py-2 w-48 mx-auto hover:bg-[#E05900] disabled:bg-[#E05900]/50"
-          >{texts[lang].form.submit}</button
+          >{texts[selectedLang].form.submit}</button
         >
       {/if}
       {#if form?.success}
         <div class="bg-[#E05900]/80 text-white text-center py-2 w-48 mx-auto">
-          {@html texts[lang].form.submitSuccess}
+          {@html texts[selectedLang].form.submitSuccess}
         </div>
       {/if}
     </div>

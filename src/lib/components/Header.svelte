@@ -35,7 +35,9 @@
       </div>
     </div>
   </Animate>
-  <div class="flex justify-between lg:justify-center bg-poliglotam_black lg:p-4 text-white">
+  <div
+    class="flex justify-between lg:justify-center bg-poliglotam_black lg:p-4 text-white"
+  >
     <button
       on:click={() => {
         open = !open;
@@ -79,27 +81,30 @@
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="/one-to-one-terms">{texts[$lang].menu.oneToOneTerms}</a
+              href="/one-to-one-terms?lang={$lang}"
+              >{texts[$lang].menu.oneToOneTerms}</a
             >
           </li>
           <li class="hover:text-poliglotam_orange transition">
-            <a target="_blank" rel="noopener noreferrer" href="/group-terms"
-              >{texts[$lang].menu.groupTerms}</a
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="/group-terms?lang={$lang}">{texts[$lang].menu.groupTerms}</a
             >
           </li>
         </div>
       </li>
     </nav>
     <select
-          name="language"
-          id="language"
-          bind:value={$lang}
-          on:change={console.log($lang)}
-          class="inline md:hidden p-2 mr-4 bg-poliglotam_black focus:outline-none"
-        >
-          <option value="en">English</option>
-          <option value="es">Español</option>
-        </select>
+      name="language"
+      id="language"
+      bind:value={$lang}
+      on:change={console.log($lang)}
+      class="inline md:hidden p-2 mr-4 bg-poliglotam_black focus:outline-none"
+    >
+      <option value="en">English</option>
+      <option value="es">Español</option>
+    </select>
   </div>
 
   <div>
@@ -168,7 +173,8 @@
         }}
         target="_blank"
         rel="noopener noreferrer"
-        href="/one-to-one-terms">{texts[$lang].menu.oneToOneTerms}</a
+        href="/one-to-one-terms?lang={$lang}"
+        >{texts[$lang].menu.oneToOneTerms}</a
       >
     </li>
     <li>
@@ -178,7 +184,7 @@
         }}
         target="_blank"
         rel="noopener noreferrer"
-        href="/group-terms">{texts[$lang].menu.groupTerms}</a
+        href="/group-terms?lang={$lang}">{texts[$lang].menu.groupTerms}</a
       >
     </li>
   </ul>
