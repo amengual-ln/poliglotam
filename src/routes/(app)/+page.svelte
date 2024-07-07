@@ -16,7 +16,7 @@
 </svelte:head>
 
 <section>
-  <img src="/home-poliglotam.webp" alt="Hero" />
+  <img src="/home-{$lang}poliglotam.png" alt="Hero" />
 </section>
 <div class="bg-[#d57927] text-white py-8">
   <section
@@ -79,5 +79,5 @@
   </section>
 </div>
 <section>
-  <img src="/home-metas.webp" alt="Logra tus metas" />
+  <img src="/home-{$lang}metas.png" alt="Logra tus metas" />
 </section>
