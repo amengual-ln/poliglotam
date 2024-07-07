@@ -11,7 +11,7 @@
   <Animate type="fade">
     <div class="flex justify-between items-center p-4 lg:px-32">
       <a href="/">
-        <img src="/logo.svg" alt="Logo" class="h-8 md:h-12" />
+        <img src="/logo.png" alt="Logo" class="h-8 md:h-12" />
       </a>
       <h1 class="opacity-80 hidden lg:block font-medium">
         {texts[$lang].tagline}
