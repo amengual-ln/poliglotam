@@ -60,7 +60,7 @@
         <a href="/experiences">{texts[$lang].menu.experiences}</a>
       </li>
       <li class="hover:text-poliglotam_orange transition">
-        {texts[$lang].menu.translations}
+        <a href="/translations">{texts[$lang].menu.translations}</a>
       </li>
       <li class="hover:text-poliglotam_orange transition">
         <a href="/contact">{texts[$lang].menu.contact}</a>
@@ -150,7 +150,7 @@
         on:click={() => {
           open = !open;
         }}
-        href="/#">{texts[$lang].menu.translations}</a
+        href="/translations">{texts[$lang].menu.translations}</a
       >
     </li>
     <li>
