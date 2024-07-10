@@ -16,7 +16,7 @@
 </svelte:head>
 
 <section>
-  <img src="/home-{$lang}poliglotam.png" alt="Hero" />
+  <img src="/home-{$lang}poliglotam.webp" alt="Hero" class="lg:aspect-[16/7] object-cover" />
 </section>
 <div class="bg-[#d57927] text-white py-8">
   <section
@@ -79,5 +79,5 @@
   </section>
 </div>
 <section>
-  <img src="/home-{$lang}metas.png" alt="Logra tus metas" />
+  <img src="/home-{$lang}metas.webp" alt="Logra tus metas" class="xl:aspect-[16/7] xl:object-[0_-25vh] object-cover" />
 </section>
