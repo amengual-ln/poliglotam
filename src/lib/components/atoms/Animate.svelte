@@ -3,6 +3,11 @@
   import { inview } from "svelte-inview";
 
   export let type;
+  export let config = {};
+
+  const defaultConfig = { delay: 250, duration: 500, y: 100, opacity: 0 };
+
+  config = { ...defaultConfig, ...config };
 
   const animation = transition[type];
 
@@ -12,11 +17,11 @@
 <div
   use:inview={{ unobserveOnEnter: true, rootMargin: "0%" }}
   on:change={({ detail }) => {
-    isInView = detail?.inView || true;
+    isInView = detail?.inView || false;
   }}
 >
   {#if isInView}
-    <div in:animation={{ delay: 250, duration: 500, y: 100, opacity: 0 }}>
+    <div in:animation={config}>
       <slot />
     </div>
   {/if}
